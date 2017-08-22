@@ -1,0 +1,78 @@
+/home/pavel/.rbenv/versions
+
+docker run -it  --network=host --add-host="moby:127.0.0.1" docportal /bin/bash
+docker run -it --network=host --add-host='moby:127.0.0.1' doccassso /bin/bash
+docker run -it --network=host --add-host='moby:127.0.0.1' doccassso
+
+sudo apt install maven
+sudo apt install linuxbrew-wrapper
+mvn clean package
+brew install mvnvm
+brew install tomcat
+
+docker build -t doccas_sso .
+docker run -it --network=host doccas_sso /bin/bash
+http://10.0.75.2:8080/
+http://10.0.75.2:8443/cas
+
+docker run -i -t --network=host  --add-host='moby:127.0.0.1'  doccas_sso /tomcat/bin/catalina.sh run
+
+rbenv install --verbose 2.2.3
+
+rbenv install 1.9.3-p0
+rbenv local 1.9.3-p0
+rbenv rehash
+
+docker build -t dockeyes .
+docker run -it dockeyes /bin/bash
+docker run -it --network=host dockeyes  /bin/bash
+docker run -it dockeyes foreman start
+docker run -it --network=host dockeyes foreman start
+
+http://10.0.75.2:7001/
+
+git branch
+git status
+git checkout -b docker
+git add
+git commit -m ""
+git push origin docker
+
+docker build -t docaddrbook .
+docker run -it docaddrbook /bin/bash
+docker run -it --network=host docaddrbook foreman start
+http://10.0.75.2:3000/
+
+
+docker build -t docportal .
+docker run -it docportal /bin/bash
+docker run -it --network=host docportal foreman start
+http://10.0.75.2:3000/
+
+RUN apt-get update && apt-get install -y
+set -o pipefail && - for  | command
+
+eval "$(ssh-agent -s)"
+
+gem install bundler
+eval "$(rbenv init -)"
+
+
+
+sudo sudo -i -u postgres            
+psql -h 127.0.0.1
+sudo su postgres
+ sudo service postgresql start
+apt-get install net-tools
+
+docker stop $(docker ps -aq)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+
+bundle  package --all
+docker build -t doclibrarian .
+docker run -it doclibrarian  /bin/bash
+docker run -it --network=host doclibrarian /bin/bash
+docker run -it doclibrarian foreman start
+docker run -it --network=host doclibrarian foreman start
+http://10.0.75.2:5000/

@@ -1,0 +1,1 @@
+~/.linuxbrew/Cellar/tomcat/8.5.16_1/bin/catalina start

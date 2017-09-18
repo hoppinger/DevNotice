@@ -1,0 +1,65 @@
+rails new rordemo --webpack=react
+rails generate react_on_rails:install
+bundle install
+
+We did not find a spec/rails_helper.rb or spec/spec_helper.rb to add
+the React on Rails Test helper, which ensures that if we are running
+js tests, then we are using latest webpack assets. You can later add
+this to your rspec config:
+
+# This will use the defaults of :js and :server_rendering meta tags
+ReactOnRails::TestHelper.configure_rspec_to_compile_assets(config)
+
+
+What to do next:
+
+  - Include your webpack assets to your application layout. Change hello-world-bundle as needed.
+
+      <%= javascript_pack_tag 'hello-world-bundle' %>
+
+  - Run the foreman command to start the rails server and run webpack in watch mode.
+
+      foreman start -f Procfile.dev
+
+  - Change this line app/views/hello_world/index.html.erb to `prerender: true` to see
+    server rendering (right click on page and select "view source").
+
+      <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: true) %>
+
+  - Run the foreman command to start the rails server and run webpack in HMR mode. Be sure
+    to change your development/dev_server/hmr setting to true to see HMR in action.
+    Note, you cannot use the default Procfile.dev-server setup with server rendering.
+
+      foreman start -f Procfile.dev-server
+
+  - You may run the commands in the Procfiles in separate shells rather than using foreman.
+
+  - See the documentation on https://github.com/rails/webpacker/blob/master/docs/webpack.md
+    for how to customize the default webpack configuration.
+
+  - Visit http://localhost:3000/hello_world and see your React On Rails app running!
+
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Gemfile
+        modified:   config/routes.rb
+        modified:   spec/rails_helper.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Procfile.dev
+        Procfile.dev-server
+        app/controllers/hello_world_controller.rb
+        app/javascript/
+        app/views/hello_world/
+        app/views/layouts/hello_world.html.erb
+        config/initializers/react_on_rails.rb
+        node_modules/
+        package.json
+        yarn.lock
+
+

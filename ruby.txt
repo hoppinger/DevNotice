@@ -1,1 +1,4 @@
 binding.pry
+
+bin/rails generate migration AddCustomerNumberToSessionMeta
+bundle exec rake db:migrate

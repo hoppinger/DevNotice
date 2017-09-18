@@ -48,6 +48,8 @@ docker build -t docportal .
 docker run -it docportal /bin/bash
 docker run -it --network=host docportal foreman start
 http://10.0.75.2:3000/
+docker run -it --network=host docportal /bin/bash
+
 
 RUN apt-get update && apt-get install -y
 set -o pipefail && - for  | command
@@ -76,3 +78,9 @@ docker run -it --network=host doclibrarian /bin/bash
 docker run -it doclibrarian foreman start
 docker run -it --network=host doclibrarian foreman start
 http://10.0.75.2:5000/
+
+docker-compose up
+
+docker-compose build
+
+docker exec -it <container>  /bin/bash

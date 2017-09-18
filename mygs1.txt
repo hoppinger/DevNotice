@@ -1,1 +1,7 @@
 http://localhost:3000/api/v1/session_meta?filter_contact_person_name=Peter%20Parker
+
+ ./node_modules/.bin/webpack
+
+sudo redis-server
+docker-compose up
+

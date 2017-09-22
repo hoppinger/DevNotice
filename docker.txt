@@ -84,3 +84,11 @@ docker-compose up
 docker-compose build
 
 docker exec -it <container>  /bin/bash
+
+docker build -f <dockerfile> -t <imagename> .
+docker build -f Dockerfile.testing -t docdwm .
+
+docker ps
+docker exec -it awesome_einstein /bin/bash
+
+

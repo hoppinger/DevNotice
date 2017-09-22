@@ -1,0 +1,62 @@
+ docker build -t docarbiter .
+docker run -it --network=host docarbiter /bin/bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+git clone git@github.com:hoppinger/mijngs1-arbiter.git
+git checkout  feature/130-Session-Dashboard
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+add to gemfile 
+
+gem "react_on_rails", "9.0.0"
+gem "webpacker", "~> 3.0"
+bundle install
+bundle install --no-deployment
+bundle update
+?? npm install
+curl -sL https://deb.nodesource.com/setup_6.x | bash -.
+apt-get install -yq nodejs
+
+bundle exec rails webpacker:install
+bundle exec rails webpacker:install:react
+
+rake webpacker:install
+
+rake webpacker:install:react
+
+git config --global user.name "Pavel Kucherov"
+git config --global user.email "pavelkucherov@hoppinger.com"
+
+docker-compose build
+docker-compose up
+
+
+What to do next:
+
+  - Include your webpack assets to your application layout. Change hello-world-bundle as needed.
+
+      <%= javascript_pack_tag 'hello-world-bundle' %>
+
+  - Run the foreman command to start the rails server and run webpack in watch mode.
+
+      foreman start -f Procfile.dev
+
+  - Change this line app/views/hello_world/index.html.erb to `prerender: true` to see
+    server rendering (right click on page and select "view source").
+
+      <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: true) %>
+
+  - Run the foreman command to start the rails server and run webpack in HMR mode. Be sure
+    to change your development/dev_server/hmr setting to true to see HMR in action.
+    Note, you cannot use the default Procfile.dev-server setup with server rendering.
+
+      foreman start -f Procfile.dev-server
+
+  - You may run the commands in the Procfiles in separate shells rather than using foreman.
+
+  - See the documentation on https://github.com/rails/webpacker/blob/master/docs/webpack.md
+    for how to customize the default webpack configuration.
+
+  - Visit http://localhost:3000/hello_world and see your React On Rails app running!
+

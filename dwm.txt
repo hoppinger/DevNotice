@@ -1,0 +1,3 @@
+ruby deploy_testing.rb
+stockholm.sweden
+malmo.sweden

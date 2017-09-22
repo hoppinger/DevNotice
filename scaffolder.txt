@@ -1,0 +1,5 @@
+node out/generator.js -i ../drukwerkmax-productdb  -t ./project_template -s spec.json -o ../drukwerkmax-productdb 
+
+node out\tests\create_all.js
+
+

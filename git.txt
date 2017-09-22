@@ -1,0 +1,4 @@
+git checkout -b  <branch name>
+git pull origin 
+git push origin
+git remote add

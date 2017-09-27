@@ -1,4 +1,6 @@
 git checkout -b  <branch name>
-git pull origin 
-git push origin
-git remote add
+git pull origin  <branch name>
+git push origin  <branch name>
+git remote add  <branch name>
+
+git merge <branch name> 

@@ -8,3 +8,8 @@ rbenv global 2.4.2
 ruby -v
 gem install foreman
 gem install bundler
+rbenv rehash
+gem install rails -v 5.1.4
+
+bundle exec rails s
+

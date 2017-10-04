@@ -5,3 +5,5 @@ http://localhost:3000/api/v1/session_meta?filter_contact_person_name=Peter%20Par
 sudo redis-server
 docker-compose up
 
+
+User.create(email: "pavel@hoppinger.com", username: "pavel", admin:true, password: "test1234")

@@ -13,3 +13,5 @@ docker build --force-rm -f Dockerfile.testing -t dwm_t .
 
 docker run -t dwm_t dotnet ef database update -c DrukwerkMaxContext
 
+
+dotnet ef database update

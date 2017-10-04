@@ -60,3 +60,7 @@ What to do next:
 
   - Visit http://localhost:3000/hello_world and see your React On Rails app running!
 
+
+
+
+typescript 2.1.4

@@ -1,3 +1,0 @@
-on unix
-
-sudo apt-get install openssh-server unzip curl
